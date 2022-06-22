@@ -1,0 +1,564 @@
+[2022-06-19 21:36:57,739] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [None]>
+[2022-06-19 21:36:57,744] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [None]>
+[2022-06-19 21:36:57,744] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 21:36:57,744] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-19 21:36:57,744] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 21:36:58,011] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-19 21:36:58,012] {standard_task_runner.py:54} INFO - Started process 11383 to run task
+[2022-06-19 21:36:58,050] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '40', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmp2uy0lh7o']
+[2022-06-19 21:36:58,050] {standard_task_runner.py:78} INFO - Job 40: Subtask who_scored
+[2022-06-19 21:36:58,198] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-19 21:36:58,207] {logging_mixin.py:112} INFO - 
+[2022-06-19 21:36:58,207] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-19 21:36:58,237] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-19 21:36:58,237] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-19 21:36:58,353] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-19 21:37:00,790] {taskinstance.py:1150} ERROR - Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=102.0.5005.115)
+Stacktrace:
+#0 0x556b093e5f33 <unknown>
+#1 0x556b09130118 <unknown>
+#2 0x556b0911bff5 <unknown>
+#3 0x556b0911ba55 <unknown>
+#4 0x556b0911af15 <unknown>
+#5 0x556b09119c0f <unknown>
+#6 0x556b0911a19c <unknown>
+#7 0x556b09129ba5 <unknown>
+#8 0x556b0911b7a6 <unknown>
+#9 0x556b0911c6bb <unknown>
+#10 0x556b0911ba72 <unknown>
+#11 0x556b0911af15 <unknown>
+#12 0x556b09119c0f <unknown>
+#13 0x556b0911a042 <unknown>
+#14 0x556b09131b92 <unknown>
+#15 0x556b09197a3f <unknown>
+#16 0x556b09183f72 <unknown>
+#17 0x556b091972e4 <unknown>
+#18 0x556b09183e63 <unknown>
+#19 0x556b0915982a <unknown>
+#20 0x556b0915a985 <unknown>
+#21 0x556b0942a4cd <unknown>
+#22 0x556b0942e5ec <unknown>
+#23 0x556b0941471e <unknown>
+#24 0x556b0942f238 <unknown>
+#25 0x556b09409870 <unknown>
+#26 0x556b0944b608 <unknown>
+#27 0x556b0944b788 <unknown>
+#28 0x556b09465f1d <unknown>
+#29 0x7f91fb173b43 <unknown>
+Traceback (most recent call last):
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 984, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/lucas/pipeline-data/airflow/plugins/operators/who_scored_operator.py", line 46, in execute
+    games = hook.run()
+  File "/home/lucas/pipeline-data/airflow/plugins/hooks/who_scored_hook.py", line 180, in run
+    self.connect_to_website()
+  File "/home/lucas/pipeline-data/airflow/plugins/hooks/who_scored_hook.py", line 37, in connect_to_website
+    self.driver.get(url)
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 442, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 430, in execute
+    self.error_handler.check_response(response)
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=102.0.5005.115)
+Stacktrace:
+#0 0x556b093e5f33 <unknown>
+#1 0x556b09130118 <unknown>
+#2 0x556b0911bff5 <unknown>
+#3 0x556b0911ba55 <unknown>
+#4 0x556b0911af15 <unknown>
+#5 0x556b09119c0f <unknown>
+#6 0x556b0911a19c <unknown>
+#7 0x556b09129ba5 <unknown>
+#8 0x556b0911b7a6 <unknown>
+#9 0x556b0911c6bb <unknown>
+#10 0x556b0911ba72 <unknown>
+#11 0x556b0911af15 <unknown>
+#12 0x556b09119c0f <unknown>
+#13 0x556b0911a042 <unknown>
+#14 0x556b09131b92 <unknown>
+#15 0x556b09197a3f <unknown>
+#16 0x556b09183f72 <unknown>
+#17 0x556b091972e4 <unknown>
+#18 0x556b09183e63 <unknown>
+#19 0x556b0915982a <unknown>
+#20 0x556b0915a985 <unknown>
+#21 0x556b0942a4cd <unknown>
+#22 0x556b0942e5ec <unknown>
+#23 0x556b0941471e <unknown>
+#24 0x556b0942f238 <unknown>
+#25 0x556b09409870 <unknown>
+#26 0x556b0944b608 <unknown>
+#27 0x556b0944b788 <unknown>
+#28 0x556b09465f1d <unknown>
+#29 0x7f91fb173b43 <unknown>
+
+[2022-06-19 21:37:00,835] {taskinstance.py:1187} INFO - Marking task as FAILED. dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220620T003657, end_date=20220620T003700
+[2022-06-19 21:44:55,966] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-19 21:44:55,971] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-19 21:44:55,971] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 21:44:55,971] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-19 21:44:55,971] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 21:44:56,414] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-19 21:44:56,415] {standard_task_runner.py:54} INFO - Started process 13924 to run task
+[2022-06-19 21:44:56,454] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '43', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpo3w2m648']
+[2022-06-19 21:44:56,454] {standard_task_runner.py:78} INFO - Job 43: Subtask who_scored
+[2022-06-19 21:44:56,645] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-19 21:44:56,653] {logging_mixin.py:112} INFO - 
+[2022-06-19 21:44:56,653] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-19 21:44:56,686] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-19 21:44:56,686] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-19 21:44:56,795] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-19 21:45:40,574] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220620T004455, end_date=20220620T004540
+[2022-06-19 21:45:41,466] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-19 21:50:26,749] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-19 21:50:26,754] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-19 21:50:26,754] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 21:50:26,754] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-19 21:50:26,754] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-19 21:50:26,897] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-19 21:50:26,899] {standard_task_runner.py:54} INFO - Started process 15511 to run task
+[2022-06-19 21:50:26,936] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '43', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpgmccsoei']
+[2022-06-19 21:50:26,936] {standard_task_runner.py:78} INFO - Job 43: Subtask who_scored
+[2022-06-19 21:50:27,151] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-19 21:50:27,159] {logging_mixin.py:112} INFO - 
+[2022-06-19 21:50:27,159] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-19 21:50:27,191] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-19 21:50:27,192] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-19 21:50:27,302] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-19 21:51:18,256] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220620T005026, end_date=20220620T005118
+[2022-06-19 21:51:21,654] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-20 13:33:13,336] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [None]>
+[2022-06-20 13:33:13,352] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [None]>
+[2022-06-20 13:33:13,352] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 13:33:13,352] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-20 13:33:13,352] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 13:33:13,485] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-20 13:33:13,487] {standard_task_runner.py:54} INFO - Started process 5011 to run task
+[2022-06-20 13:33:13,523] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '54', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmptkmnzzjt']
+[2022-06-20 13:33:13,524] {standard_task_runner.py:78} INFO - Job 54: Subtask who_scored
+[2022-06-20 13:33:13,645] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-20 13:33:13,653] {logging_mixin.py:112} INFO - 
+[2022-06-20 13:33:13,654] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-20 13:33:13,685] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-20 13:33:13,686] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-20 13:33:13,792] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-20 13:33:34,592] {taskinstance.py:1150} ERROR - Message: chrome not reachable
+  (Session info: chrome=102.0.5005.115)
+Stacktrace:
+#0 0x5622fb02ff33 <unknown>
+#1 0x5622fad79faf <unknown>
+#2 0x5622fad682e4 <unknown>
+#3 0x5622fad68cf2 <unknown>
+#4 0x5622fad6ab12 <unknown>
+#5 0x5622fad62f16 <unknown>
+#6 0x5622fad7b522 <unknown>
+#7 0x5622fade0961 <unknown>
+#8 0x5622fadcde63 <unknown>
+#9 0x5622fada382a <unknown>
+#10 0x5622fada4985 <unknown>
+#11 0x5622fb0744cd <unknown>
+#12 0x5622fb0785ec <unknown>
+#13 0x5622fb05e71e <unknown>
+#14 0x5622fb079238 <unknown>
+#15 0x5622fb053870 <unknown>
+#16 0x5622fb095608 <unknown>
+#17 0x5622fb095788 <unknown>
+#18 0x5622fb0aff1d <unknown>
+#19 0x7eff9ce7cb43 <unknown>
+Traceback (most recent call last):
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 984, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/lucas/pipeline-data/airflow/plugins/operators/who_scored_operator.py", line 46, in execute
+    games = hook.run()
+  File "/home/lucas/pipeline-data/airflow/plugins/hooks/who_scored_hook.py", line 187, in run
+    self.get_match_report(link)
+  File "/home/lucas/pipeline-data/airflow/plugins/hooks/who_scored_hook.py", line 166, in get_match_report
+    self.get_teams()
+  File "/home/lucas/pipeline-data/airflow/plugins/hooks/who_scored_hook.py", line 100, in get_teams
+    teams = self.driver.find_elements(By.XPATH, '//a[(@class = "team-name")]')
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 1284, in find_elements
+    return self.execute(Command.FIND_ELEMENTS, {
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 430, in execute
+    self.error_handler.check_response(response)
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: chrome not reachable
+  (Session info: chrome=102.0.5005.115)
+Stacktrace:
+#0 0x5622fb02ff33 <unknown>
+#1 0x5622fad79faf <unknown>
+#2 0x5622fad682e4 <unknown>
+#3 0x5622fad68cf2 <unknown>
+#4 0x5622fad6ab12 <unknown>
+#5 0x5622fad62f16 <unknown>
+#6 0x5622fad7b522 <unknown>
+#7 0x5622fade0961 <unknown>
+#8 0x5622fadcde63 <unknown>
+#9 0x5622fada382a <unknown>
+#10 0x5622fada4985 <unknown>
+#11 0x5622fb0744cd <unknown>
+#12 0x5622fb0785ec <unknown>
+#13 0x5622fb05e71e <unknown>
+#14 0x5622fb079238 <unknown>
+#15 0x5622fb053870 <unknown>
+#16 0x5622fb095608 <unknown>
+#17 0x5622fb095788 <unknown>
+#18 0x5622fb0aff1d <unknown>
+#19 0x7eff9ce7cb43 <unknown>
+
+[2022-06-20 13:33:34,628] {taskinstance.py:1187} INFO - Marking task as FAILED. dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220620T163313, end_date=20220620T163334
+[2022-06-20 13:33:38,248] {local_task_job.py:102} INFO - Task exited with return code 1
+[2022-06-20 15:18:26,831] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-20 15:18:26,836] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-20 15:18:26,836] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 15:18:26,836] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-20 15:18:26,836] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 15:18:27,149] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-20 15:18:27,151] {standard_task_runner.py:54} INFO - Started process 26939 to run task
+[2022-06-20 15:18:27,189] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '55', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpea79c1xw']
+[2022-06-20 15:18:27,189] {standard_task_runner.py:78} INFO - Job 55: Subtask who_scored
+[2022-06-20 15:18:27,429] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-20 15:18:27,437] {logging_mixin.py:112} INFO - 
+[2022-06-20 15:18:27,437] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-20 15:18:27,469] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-20 15:18:27,469] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-20 15:18:27,577] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-20 15:19:17,210] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220620T181826, end_date=20220620T181917
+[2022-06-20 15:19:21,717] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-20 22:23:21,712] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-20 22:23:21,716] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-20 22:23:21,717] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 22:23:21,717] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-20 22:23:21,717] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 22:23:21,928] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-20 22:23:21,930] {standard_task_runner.py:54} INFO - Started process 71197 to run task
+[2022-06-20 22:23:21,971] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '102', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpebijftiw']
+[2022-06-20 22:23:21,971] {standard_task_runner.py:78} INFO - Job 102: Subtask who_scored
+[2022-06-20 22:23:22,142] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-20 22:23:22,151] {logging_mixin.py:112} INFO - 
+[2022-06-20 22:23:22,151] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-20 22:23:22,187] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-20 22:23:22,187] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-20 22:23:22,299] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-20 22:24:10,215] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T012321, end_date=20220621T012410
+[2022-06-20 22:24:11,506] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-20 22:31:00,620] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-20 22:31:00,625] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-20 22:31:00,625] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 22:31:00,625] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-20 22:31:00,626] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 22:31:00,838] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-20 22:31:00,840] {standard_task_runner.py:54} INFO - Started process 72590 to run task
+[2022-06-20 22:31:00,879] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '99', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmp7pi3ggw5']
+[2022-06-20 22:31:00,880] {standard_task_runner.py:78} INFO - Job 99: Subtask who_scored
+[2022-06-20 22:31:01,025] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-20 22:31:01,034] {logging_mixin.py:112} INFO - 
+[2022-06-20 22:31:01,034] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-20 22:31:01,068] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-20 22:31:01,068] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-20 22:31:01,179] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-20 22:31:51,776] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T013100, end_date=20220621T013151
+[2022-06-20 22:31:55,493] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-21 00:26:40,600] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 00:26:40,605] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 00:26:40,605] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 00:26:40,605] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 00:26:40,605] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 00:26:40,774] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-21 00:26:40,775] {standard_task_runner.py:54} INFO - Started process 110228 to run task
+[2022-06-21 00:26:40,813] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '99', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmp8k5zv5vp']
+[2022-06-21 00:26:40,813] {standard_task_runner.py:78} INFO - Job 99: Subtask who_scored
+[2022-06-21 00:26:41,057] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 00:26:41,065] {logging_mixin.py:112} INFO - 
+[2022-06-21 00:26:41,065] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 00:26:41,097] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 00:26:41,098] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 00:26:41,198] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 00:27:28,436] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T032640, end_date=20220621T032728
+[2022-06-21 00:27:30,496] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-21 00:33:52,637] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 00:33:52,642] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 00:33:52,642] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 00:33:52,642] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 00:33:52,642] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 00:33:52,854] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-21 00:33:52,855] {standard_task_runner.py:54} INFO - Started process 112447 to run task
+[2022-06-21 00:33:52,893] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '99', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpjestlier']
+[2022-06-21 00:33:52,894] {standard_task_runner.py:78} INFO - Job 99: Subtask who_scored
+[2022-06-21 00:33:53,063] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 00:33:53,072] {logging_mixin.py:112} INFO - 
+[2022-06-21 00:33:53,072] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 00:33:53,105] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 00:33:53,105] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 00:33:53,209] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 00:34:42,248] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T033352, end_date=20220621T033442
+[2022-06-21 00:34:42,601] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-21 09:46:13,994] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 09:46:14,039] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 09:46:14,040] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 09:46:14,040] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 09:46:14,040] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 09:46:14,213] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-21 09:46:14,214] {standard_task_runner.py:54} INFO - Started process 9285 to run task
+[2022-06-21 09:46:14,252] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '111', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmp9kr1y574']
+[2022-06-21 09:46:14,252] {standard_task_runner.py:78} INFO - Job 111: Subtask who_scored
+[2022-06-21 09:46:14,398] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 09:46:14,430] {logging_mixin.py:112} INFO - 
+[2022-06-21 09:46:14,430] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 09:46:14,463] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 09:46:14,463] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 09:46:14,566] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 09:47:01,940] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T124614, end_date=20220621T124701
+[2022-06-21 09:47:03,899] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-21 09:55:15,124] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 09:55:15,129] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 09:55:15,129] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 09:55:15,129] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 09:55:15,129] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 09:55:15,308] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-21 09:55:15,310] {standard_task_runner.py:54} INFO - Started process 12610 to run task
+[2022-06-21 09:55:15,347] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '119', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpkzft40sz']
+[2022-06-21 09:55:15,347] {standard_task_runner.py:78} INFO - Job 119: Subtask who_scored
+[2022-06-21 09:55:15,489] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 09:55:15,512] {logging_mixin.py:112} INFO - 
+[2022-06-21 09:55:15,512] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 09:55:15,545] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 09:55:15,546] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 09:55:15,721] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 09:56:05,577] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T125515, end_date=20220621T125605
+[2022-06-21 09:56:10,024] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-21 09:59:24,115] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 09:59:24,120] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 09:59:24,120] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 09:59:24,120] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 09:59:24,120] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 09:59:24,294] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-21 09:59:24,295] {standard_task_runner.py:54} INFO - Started process 13667 to run task
+[2022-06-21 09:59:24,333] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '120', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpm26djjzl']
+[2022-06-21 09:59:24,333] {standard_task_runner.py:78} INFO - Job 120: Subtask who_scored
+[2022-06-21 09:59:24,473] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 09:59:24,481] {logging_mixin.py:112} INFO - 
+[2022-06-21 09:59:24,481] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 09:59:24,513] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 09:59:24,513] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 09:59:24,617] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 10:00:11,273] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T125924, end_date=20220621T130011
+[2022-06-21 10:00:14,002] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-21 10:36:07,039] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 10:36:07,045] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 10:36:07,045] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 10:36:07,045] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 10:36:07,045] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 10:36:07,220] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-21 10:36:07,222] {standard_task_runner.py:54} INFO - Started process 19712 to run task
+[2022-06-21 10:36:07,259] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '121', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmp0vaor52n']
+[2022-06-21 10:36:07,259] {standard_task_runner.py:78} INFO - Job 121: Subtask who_scored
+[2022-06-21 10:36:07,374] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 10:36:07,395] {logging_mixin.py:112} INFO - 
+[2022-06-21 10:36:07,395] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 10:36:07,427] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 10:36:07,427] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 10:36:07,532] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 10:36:56,618] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T133607, end_date=20220621T133656
+[2022-06-21 10:36:57,024] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-21 10:42:02,939] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 10:42:02,944] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 10:42:02,944] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 10:42:02,944] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 10:42:02,944] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 10:42:03,445] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-21 10:42:03,447] {standard_task_runner.py:54} INFO - Started process 20925 to run task
+[2022-06-21 10:42:03,485] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '121', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpu6bs1m7o']
+[2022-06-21 10:42:03,485] {standard_task_runner.py:78} INFO - Job 121: Subtask who_scored
+[2022-06-21 10:42:03,806] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 10:42:03,815] {logging_mixin.py:112} INFO - 
+[2022-06-21 10:42:03,815] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 10:42:03,847] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 10:42:03,848] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 10:42:03,965] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 10:43:22,894] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T134202, end_date=20220621T134322
+[2022-06-21 10:43:27,549] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-21 11:07:31,485] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 11:07:31,491] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 11:07:31,491] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 11:07:31,491] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 11:07:31,491] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 11:07:31,726] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-21 11:07:31,727] {standard_task_runner.py:54} INFO - Started process 26057 to run task
+[2022-06-21 11:07:31,765] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '121', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpgapwc7uz']
+[2022-06-21 11:07:31,766] {standard_task_runner.py:78} INFO - Job 121: Subtask who_scored
+[2022-06-21 11:07:31,933] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 11:07:31,941] {logging_mixin.py:112} INFO - 
+[2022-06-21 11:07:31,942] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 11:07:31,974] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 11:07:31,974] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 11:07:32,079] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 11:08:20,787] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T140731, end_date=20220621T140820
+[2022-06-21 11:08:21,377] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-21 12:05:43,473] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 12:05:43,478] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 12:05:43,478] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 12:05:43,479] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 12:05:43,479] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 12:05:43,734] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-21 12:05:43,736] {standard_task_runner.py:54} INFO - Started process 36715 to run task
+[2022-06-21 12:05:43,772] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '121', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpmoypuyke']
+[2022-06-21 12:05:43,772] {standard_task_runner.py:78} INFO - Job 121: Subtask who_scored
+[2022-06-21 12:05:43,988] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 12:05:43,996] {logging_mixin.py:112} INFO - 
+[2022-06-21 12:05:43,996] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 12:05:44,028] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 12:05:44,028] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 12:05:44,134] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 12:06:45,422] {taskinstance.py:1150} ERROR - name 'matches' is not defined
+Traceback (most recent call last):
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 984, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/lucas/pipeline-data/airflow/plugins/operators/who_scored_operator.py", line 38, in execute
+    games = hook.run()
+  File "/home/lucas/pipeline-data/airflow/plugins/hooks/who_scored_hook.py", line 189, in run
+    return { matches: self.list_matchs, teams: self.teams }
+NameError: name 'matches' is not defined
+[2022-06-21 12:06:45,423] {taskinstance.py:1187} INFO - Marking task as FAILED. dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T150543, end_date=20220621T150645
+[2022-06-21 12:06:48,372] {local_task_job.py:102} INFO - Task exited with return code 1
+[2022-06-21 12:10:08,414] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 12:10:08,420] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 12:10:08,420] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 12:10:08,420] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 12:10:08,420] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 12:10:08,642] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-21 12:10:08,643] {standard_task_runner.py:54} INFO - Started process 37783 to run task
+[2022-06-21 12:10:08,680] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '121', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmplyx63eg1']
+[2022-06-21 12:10:08,680] {standard_task_runner.py:78} INFO - Job 121: Subtask who_scored
+[2022-06-21 12:10:08,837] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 12:10:08,845] {logging_mixin.py:112} INFO - 
+[2022-06-21 12:10:08,845] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 12:10:08,874] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 12:10:08,874] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 12:10:08,985] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 12:10:56,256] {taskinstance.py:1150} ERROR - 'WhoScoredHook' object has no attribute 'teams'
+Traceback (most recent call last):
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 984, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/lucas/pipeline-data/airflow/plugins/operators/who_scored_operator.py", line 38, in execute
+    games = hook.run()
+  File "/home/lucas/pipeline-data/airflow/plugins/hooks/who_scored_hook.py", line 191, in run
+    json['teams'] = self.teams
+AttributeError: 'WhoScoredHook' object has no attribute 'teams'
+[2022-06-21 12:10:56,257] {taskinstance.py:1187} INFO - Marking task as FAILED. dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T151008, end_date=20220621T151056
+[2022-06-21 12:10:58,300] {local_task_job.py:102} INFO - Task exited with return code 1
+[2022-06-21 12:14:17,274] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 12:14:17,279] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 12:14:17,280] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 12:14:17,280] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 12:14:17,280] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 12:14:17,534] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-21 12:14:17,536] {standard_task_runner.py:54} INFO - Started process 38943 to run task
+[2022-06-21 12:14:17,574] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '125', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpnldi4eaj']
+[2022-06-21 12:14:17,574] {standard_task_runner.py:78} INFO - Job 125: Subtask who_scored
+[2022-06-21 12:14:17,871] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 12:14:17,880] {logging_mixin.py:112} INFO - 
+[2022-06-21 12:14:17,880] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 12:14:17,911] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 12:14:17,911] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 12:14:18,011] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 12:15:06,363] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T151417, end_date=20220621T151506
+[2022-06-21 12:15:07,132] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-21 12:20:29,877] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 12:20:29,882] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 12:20:29,882] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 12:20:29,882] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 12:20:29,883] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 12:20:30,084] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-21 12:20:30,086] {standard_task_runner.py:54} INFO - Started process 39941 to run task
+[2022-06-21 12:20:30,125] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '121', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmp8lnf0jnn']
+[2022-06-21 12:20:30,125] {standard_task_runner.py:78} INFO - Job 121: Subtask who_scored
+[2022-06-21 12:20:30,255] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 12:20:30,264] {logging_mixin.py:112} INFO - 
+[2022-06-21 12:20:30,264] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 12:20:30,296] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 12:20:30,297] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 12:20:30,470] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 12:21:17,734] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T152029, end_date=20220621T152117
+[2022-06-21 12:21:19,778] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-21 13:05:51,109] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 13:05:51,115] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 13:05:51,115] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 13:05:51,115] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 13:05:51,115] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 13:05:51,317] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-21 13:05:51,318] {standard_task_runner.py:54} INFO - Started process 49366 to run task
+[2022-06-21 13:05:51,355] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '121', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpadngeabe']
+[2022-06-21 13:05:51,355] {standard_task_runner.py:78} INFO - Job 121: Subtask who_scored
+[2022-06-21 13:05:51,530] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 13:05:51,539] {logging_mixin.py:112} INFO - 
+[2022-06-21 13:05:51,539] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 13:05:51,571] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 13:05:51,571] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 13:05:51,669] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 13:06:43,337] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T160551, end_date=20220621T160643
+[2022-06-21 13:06:46,039] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-21 13:08:58,862] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 13:08:58,867] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [queued]>
+[2022-06-21 13:08:58,867] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 13:08:58,867] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 13:08:58,867] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 13:08:59,074] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-10T00:00:00+00:00
+[2022-06-21 13:08:59,076] {standard_task_runner.py:54} INFO - Started process 50077 to run task
+[2022-06-21 13:08:59,113] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-10T00:00:00+00:00', '--job_id', '121', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmp4dqbcbgk']
+[2022-06-21 13:08:59,113] {standard_task_runner.py:78} INFO - Job 121: Subtask who_scored
+[2022-06-21 13:08:59,528] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-10T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 13:08:59,536] {logging_mixin.py:112} INFO - 
+[2022-06-21 13:08:59,536] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 13:08:59,569] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 13:08:59,569] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 13:08:59,685] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 13:09:46,060] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220410T000000, start_date=20220621T160858, end_date=20220621T160946
+[2022-06-21 13:09:48,744] {local_task_job.py:102} INFO - Task exited with return code 0

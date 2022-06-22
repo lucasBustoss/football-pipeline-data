@@ -1,0 +1,289 @@
+[2022-06-21 21:00:02,151] {scheduler_job.py:154} INFO - Started process (PID=98588) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:00:02,152] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:00:02,152] {logging_mixin.py:112} INFO - [2022-06-21 21:00:02,152] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:00:02,153] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:00:02,153] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:00:02,153] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:00:02,157] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:00:02,556] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.406 seconds
+[2022-06-21 21:00:54,214] {scheduler_job.py:154} INFO - Started process (PID=98645) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:00:54,215] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:00:54,216] {logging_mixin.py:112} INFO - [2022-06-21 21:00:54,216] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:00:54,216] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:00:54,216] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:00:54,217] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:00:54,220] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:00:54,417] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.203 seconds
+[2022-06-21 21:01:46,278] {scheduler_job.py:154} INFO - Started process (PID=98710) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:01:46,279] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:01:46,279] {logging_mixin.py:112} INFO - [2022-06-21 21:01:46,279] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:01:46,280] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:01:46,280] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:01:46,280] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:01:46,284] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:01:46,525] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.247 seconds
+[2022-06-21 21:02:38,335] {scheduler_job.py:154} INFO - Started process (PID=98939) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:02:38,336] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:02:38,336] {logging_mixin.py:112} INFO - [2022-06-21 21:02:38,336] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:02:38,337] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:02:38,337] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:02:38,337] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:02:38,341] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:02:38,742] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.407 seconds
+[2022-06-21 21:03:30,384] {scheduler_job.py:154} INFO - Started process (PID=99060) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:03:30,386] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:03:30,386] {logging_mixin.py:112} INFO - [2022-06-21 21:03:30,386] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:03:30,387] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:03:30,387] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:03:30,387] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:03:30,391] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:03:30,558] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.173 seconds
+[2022-06-21 21:04:22,437] {scheduler_job.py:154} INFO - Started process (PID=99139) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:04:22,439] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:04:22,439] {logging_mixin.py:112} INFO - [2022-06-21 21:04:22,439] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:04:22,439] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:04:22,440] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:04:22,440] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:04:22,443] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:04:22,630] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.193 seconds
+[2022-06-21 21:05:14,722] {scheduler_job.py:154} INFO - Started process (PID=99266) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:05:14,724] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:05:14,724] {logging_mixin.py:112} INFO - [2022-06-21 21:05:14,724] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:05:14,724] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:05:14,725] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:05:14,725] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:05:14,728] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:05:14,905] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.183 seconds
+[2022-06-21 21:06:21,202] {scheduler_job.py:154} INFO - Started process (PID=99495) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:06:21,203] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:06:21,204] {logging_mixin.py:112} INFO - [2022-06-21 21:06:21,204] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:06:21,204] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:06:21,205] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:06:21,205] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:06:21,209] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:06:21,371] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.168 seconds
+[2022-06-21 21:07:13,255] {scheduler_job.py:154} INFO - Started process (PID=99591) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:07:13,256] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:07:13,257] {logging_mixin.py:112} INFO - [2022-06-21 21:07:13,257] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:07:13,257] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:07:13,258] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:07:13,258] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:07:13,265] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:07:13,795] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.540 seconds
+[2022-06-21 21:08:06,329] {scheduler_job.py:154} INFO - Started process (PID=99864) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:08:06,330] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:08:06,330] {logging_mixin.py:112} INFO - [2022-06-21 21:08:06,330] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:08:06,331] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:08:06,331] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:08:06,331] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:08:06,335] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:08:06,855] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.527 seconds
+[2022-06-21 21:09:02,638] {scheduler_job.py:154} INFO - Started process (PID=99996) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:09:02,639] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:09:02,639] {logging_mixin.py:112} INFO - [2022-06-21 21:09:02,639] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:09:02,640] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:09:02,641] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:09:02,641] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:09:02,645] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:09:03,592] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.954 seconds
+[2022-06-21 21:09:55,645] {scheduler_job.py:154} INFO - Started process (PID=100193) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:09:55,646] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:09:55,646] {logging_mixin.py:112} INFO - [2022-06-21 21:09:55,646] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:09:55,647] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:09:55,647] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:09:55,647] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:09:55,651] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:09:56,009] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.364 seconds
+[2022-06-21 21:10:47,698] {scheduler_job.py:154} INFO - Started process (PID=100303) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:10:47,699] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:10:47,699] {logging_mixin.py:112} INFO - [2022-06-21 21:10:47,699] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:10:47,700] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:10:47,700] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:10:47,700] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:10:47,704] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:10:47,856] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.158 seconds
+[2022-06-21 21:11:39,749] {scheduler_job.py:154} INFO - Started process (PID=100436) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:11:39,750] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:11:39,750] {logging_mixin.py:112} INFO - [2022-06-21 21:11:39,750] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:11:39,751] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:11:39,751] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:11:39,751] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:11:39,755] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:11:39,897] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.148 seconds
+[2022-06-21 21:12:34,041] {scheduler_job.py:154} INFO - Started process (PID=100595) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:12:34,042] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:12:34,042] {logging_mixin.py:112} INFO - [2022-06-21 21:12:34,042] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:12:34,043] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:12:34,043] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:12:34,043] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:12:34,047] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:12:34,421] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.380 seconds
+[2022-06-21 21:13:30,297] {scheduler_job.py:154} INFO - Started process (PID=100737) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:13:30,298] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:13:30,298] {logging_mixin.py:112} INFO - [2022-06-21 21:13:30,298] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:13:30,299] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:13:30,299] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:13:30,299] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:13:30,303] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:13:30,443] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.147 seconds
+[2022-06-21 21:14:22,344] {scheduler_job.py:154} INFO - Started process (PID=100835) to work on /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:14:22,345] {scheduler_job.py:1572} INFO - Processing file /home/lucas/pipeline-data/airflow/dags/football_dag.py for tasks to queue
+[2022-06-21 21:14:22,345] {logging_mixin.py:112} INFO - [2022-06-21 21:14:22,345] {dagbag.py:417} INFO - Filling up the DagBag from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:14:22,346] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'ApiFootballOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.api_football_operator.ApiFootballOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:14:22,346] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'OddsPortalOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.odds_portal_operator.OddsPortalOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:14:22,346] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/airflow/dags/football_dag.py:11: FutureWarning: Importing 'WhoScoredOperator' from under 'airflow.operators.*' has been deprecated and should be directly imported as 'operators.who_scored_operator.WhoScoredOperator' instead.
+
+Support for importing from within the airflow namespace for plugins will be dropped entirely in Airflow 2.0. See <http://airflow.apache.org/docs/stable/howto/custom-operator.html>.
+  from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+[2022-06-21 21:14:22,350] {scheduler_job.py:1584} INFO - DAG(s) dict_keys(['football_dag']) retrieved from /home/lucas/pipeline-data/airflow/dags/football_dag.py
+[2022-06-21 21:14:22,494] {scheduler_job.py:162} INFO - Processing /home/lucas/pipeline-data/airflow/dags/football_dag.py took 0.151 seconds

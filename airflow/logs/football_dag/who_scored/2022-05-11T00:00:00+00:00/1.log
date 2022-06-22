@@ -1,0 +1,19 @@
+[2022-06-20 17:05:23,587] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-05-11T00:00:00+00:00 [queued]>
+[2022-06-20 17:05:23,592] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-05-11T00:00:00+00:00 [queued]>
+[2022-06-20 17:05:23,592] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 17:05:23,592] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-20 17:05:23,592] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 17:05:23,802] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-05-11T00:00:00+00:00
+[2022-06-20 17:05:23,804] {standard_task_runner.py:54} INFO - Started process 18820 to run task
+[2022-06-20 17:05:23,840] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-05-11T00:00:00+00:00', '--job_id', '149', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpb_ehj1az']
+[2022-06-20 17:05:23,841] {standard_task_runner.py:78} INFO - Job 149: Subtask who_scored
+[2022-06-20 17:05:24,019] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-05-11T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-20 17:05:24,028] {logging_mixin.py:112} INFO - 
+[2022-06-20 17:05:24,028] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-20 17:05:24,060] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-20 17:05:24,061] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-20 17:05:24,167] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-20 17:05:59,246] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220511T000000, start_date=20220620T200523, end_date=20220620T200559
+[2022-06-20 17:06:03,480] {local_task_job.py:102} INFO - Task exited with return code 0

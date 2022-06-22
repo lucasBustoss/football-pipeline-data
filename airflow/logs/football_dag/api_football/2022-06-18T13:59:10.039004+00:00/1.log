@@ -1,0 +1,18 @@
+[2022-06-18 10:59:39,784] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.api_football 2022-06-18T13:59:10.039004+00:00 [queued]>
+[2022-06-18 10:59:39,789] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.api_football 2022-06-18T13:59:10.039004+00:00 [queued]>
+[2022-06-18 10:59:39,789] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-18 10:59:39,789] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-18 10:59:39,789] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-18 10:59:40,211] {taskinstance.py:901} INFO - Executing <Task(ApiFootballOperator): api_football> on 2022-06-18T13:59:10.039004+00:00
+[2022-06-18 10:59:40,212] {standard_task_runner.py:54} INFO - Started process 8187 to run task
+[2022-06-18 10:59:40,249] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'api_football', '2022-06-18T13:59:10.039004+00:00', '--job_id', '14', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmplz790o0p']
+[2022-06-18 10:59:40,250] {standard_task_runner.py:78} INFO - Job 14: Subtask api_football
+[2022-06-18 10:59:40,402] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.api_football 2022-06-18T13:59:10.039004+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-18 10:59:40,422] {base_hook.py:89} INFO - Using connection to: id: api_football_default. Host: https://api-football-v1.p.rapidapi.com/v3, Port: None, Schema: None, Login: None, Password: None, extra: XXXXXXXX
+[2022-06-18 10:59:40,451] {api_football_hook.py:36} INFO - URL: https://api-football-v1.p.rapidapi.com/v3/fixtures?season=2022&from=2022-04-01&to=2022-06-15&league=71&timezone=America%2FSao_Paulo
+[2022-06-18 10:59:40,865] {logging_mixin.py:112} WARNING - /home/lucas/pipeline-data/.env/lib/python3.9/site-packages/urllib3/connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-football-v1.p.rapidapi.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn(
+[2022-06-18 10:59:41,756] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=api_football, execution_date=20220618T135910, start_date=20220618T135939, end_date=20220618T135941
+[2022-06-18 10:59:44,494] {local_task_job.py:102} INFO - Task exited with return code 0

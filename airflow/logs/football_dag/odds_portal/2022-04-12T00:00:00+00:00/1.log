@@ -1,0 +1,173 @@
+[2022-06-20 13:39:40,688] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [queued]>
+[2022-06-20 13:39:40,693] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [queued]>
+[2022-06-20 13:39:40,693] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 13:39:40,693] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-20 13:39:40,693] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 13:39:40,838] {taskinstance.py:901} INFO - Executing <Task(OddsPortalOperator): odds_portal> on 2022-04-12T00:00:00+00:00
+[2022-06-20 13:39:40,839] {standard_task_runner.py:54} INFO - Started process 6604 to run task
+[2022-06-20 13:39:40,876] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'odds_portal', '2022-04-12T00:00:00+00:00', '--job_id', '62', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmp6i2ruekv']
+[2022-06-20 13:39:40,876] {standard_task_runner.py:78} INFO - Job 62: Subtask odds_portal
+[2022-06-20 13:39:41,047] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-20 13:39:41,055] {logging_mixin.py:112} INFO - 
+[2022-06-20 13:39:41,055] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-20 13:39:41,087] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-20 13:39:41,087] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-20 13:39:41,193] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-20 13:39:52,496] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=odds_portal, execution_date=20220412T000000, start_date=20220620T163940, end_date=20220620T163952
+[2022-06-20 13:39:55,562] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-20 15:23:51,882] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [queued]>
+[2022-06-20 15:23:51,887] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [queued]>
+[2022-06-20 15:23:51,887] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 15:23:51,887] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-20 15:23:51,887] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 15:23:52,100] {taskinstance.py:901} INFO - Executing <Task(OddsPortalOperator): odds_portal> on 2022-04-12T00:00:00+00:00
+[2022-06-20 15:23:52,102] {standard_task_runner.py:54} INFO - Started process 28328 to run task
+[2022-06-20 15:23:52,139] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'odds_portal', '2022-04-12T00:00:00+00:00', '--job_id', '60', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmp50s4zo7j']
+[2022-06-20 15:23:52,139] {standard_task_runner.py:78} INFO - Job 60: Subtask odds_portal
+[2022-06-20 15:23:52,280] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-20 15:23:52,288] {logging_mixin.py:112} INFO - 
+[2022-06-20 15:23:52,288] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-20 15:23:52,321] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-20 15:23:52,321] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-20 15:23:52,503] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-20 15:24:08,961] {logging_mixin.py:112} INFO - [<selenium.webdriver.remote.webelement.WebElement (session="0b4d38781d846cd6eed770056d651db5", element="8b794c5b-19e8-49f1-a6cf-8f44df0dda31")>]
+[2022-06-20 15:24:09,039] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=odds_portal, execution_date=20220412T000000, start_date=20220620T182351, end_date=20220620T182409
+[2022-06-20 15:24:11,710] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-20 22:39:31,306] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [queued]>
+[2022-06-20 22:39:31,311] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [queued]>
+[2022-06-20 22:39:31,311] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 22:39:31,311] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-20 22:39:31,311] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-20 22:39:31,513] {taskinstance.py:901} INFO - Executing <Task(OddsPortalOperator): odds_portal> on 2022-04-12T00:00:00+00:00
+[2022-06-20 22:39:31,515] {standard_task_runner.py:54} INFO - Started process 74682 to run task
+[2022-06-20 22:39:31,553] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'odds_portal', '2022-04-12T00:00:00+00:00', '--job_id', '104', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpcm_jpoox']
+[2022-06-20 22:39:31,553] {standard_task_runner.py:78} INFO - Job 104: Subtask odds_portal
+[2022-06-20 22:39:31,667] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-20 22:39:31,702] {logging_mixin.py:112} INFO - 
+[2022-06-20 22:39:31,702] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-20 22:39:31,733] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-20 22:39:31,733] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-20 22:39:31,918] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-20 22:39:41,488] {taskinstance.py:1150} ERROR - Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=102.0.5005.115)
+Stacktrace:
+#0 0x55abe9256f33 <unknown>
+#1 0x55abe8fa1118 <unknown>
+#2 0x55abe8f810d8 <unknown>
+#3 0x55abe8ff851b <unknown>
+#4 0x55abe9007915 <unknown>
+#5 0x55abe8ff4e63 <unknown>
+#6 0x55abe8fca82a <unknown>
+#7 0x55abe8fcb985 <unknown>
+#8 0x55abe929b4cd <unknown>
+#9 0x55abe929f5ec <unknown>
+#10 0x55abe928571e <unknown>
+#11 0x55abe92a0238 <unknown>
+#12 0x55abe927a870 <unknown>
+#13 0x55abe92bc608 <unknown>
+#14 0x55abe92bc788 <unknown>
+#15 0x55abe92d6f1d <unknown>
+#16 0x7f1bfc4f8b43 <unknown>
+Traceback (most recent call last):
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 984, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/lucas/pipeline-data/airflow/plugins/operators/odds_portal_operator.py", line 40, in execute
+    result = hook.run()
+  File "/home/lucas/pipeline-data/airflow/plugins/hooks/odds_portal_hook.py", line 126, in run
+    games_rows = self.get_games_by_date()
+  File "/home/lucas/pipeline-data/airflow/plugins/hooks/odds_portal_hook.py", line 75, in get_games_by_date
+    pagination = self.driver.find_elements(By.XPATH, '//div[@id="pagination"]//a')
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 1284, in find_elements
+    return self.execute(Command.FIND_ELEMENTS, {
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 430, in execute
+    self.error_handler.check_response(response)
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=102.0.5005.115)
+Stacktrace:
+#0 0x55abe9256f33 <unknown>
+#1 0x55abe8fa1118 <unknown>
+#2 0x55abe8f810d8 <unknown>
+#3 0x55abe8ff851b <unknown>
+#4 0x55abe9007915 <unknown>
+#5 0x55abe8ff4e63 <unknown>
+#6 0x55abe8fca82a <unknown>
+#7 0x55abe8fcb985 <unknown>
+#8 0x55abe929b4cd <unknown>
+#9 0x55abe929f5ec <unknown>
+#10 0x55abe928571e <unknown>
+#11 0x55abe92a0238 <unknown>
+#12 0x55abe927a870 <unknown>
+#13 0x55abe92bc608 <unknown>
+#14 0x55abe92bc788 <unknown>
+#15 0x55abe92d6f1d <unknown>
+#16 0x7f1bfc4f8b43 <unknown>
+
+[2022-06-20 22:39:41,490] {taskinstance.py:1187} INFO - Marking task as FAILED. dag_id=football_dag, task_id=odds_portal, execution_date=20220412T000000, start_date=20220621T013931, end_date=20220621T013941
+[2022-06-20 22:39:46,126] {local_task_job.py:102} INFO - Task exited with return code 1
+[2022-06-21 09:43:06,078] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [queued]>
+[2022-06-21 09:43:06,091] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [queued]>
+[2022-06-21 09:43:06,092] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 09:43:06,092] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 09:43:06,092] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 09:43:06,263] {taskinstance.py:901} INFO - Executing <Task(OddsPortalOperator): odds_portal> on 2022-04-12T00:00:00+00:00
+[2022-06-21 09:43:06,264] {standard_task_runner.py:54} INFO - Started process 7939 to run task
+[2022-06-21 09:43:06,302] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'odds_portal', '2022-04-12T00:00:00+00:00', '--job_id', '106', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpoe659jiz']
+[2022-06-21 09:43:06,302] {standard_task_runner.py:78} INFO - Job 106: Subtask odds_portal
+[2022-06-21 09:43:06,454] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 09:43:06,462] {logging_mixin.py:112} INFO - 
+[2022-06-21 09:43:06,462] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 09:43:06,489] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 09:43:06,489] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 09:43:06,985] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 09:43:33,029] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=odds_portal, execution_date=20220412T000000, start_date=20220621T124306, end_date=20220621T124333
+[2022-06-21 09:43:35,948] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-21 10:08:32,235] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [queued]>
+[2022-06-21 10:08:32,240] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [queued]>
+[2022-06-21 10:08:32,241] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 10:08:32,241] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 10:08:32,241] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 10:08:32,504] {taskinstance.py:901} INFO - Executing <Task(OddsPortalOperator): odds_portal> on 2022-04-12T00:00:00+00:00
+[2022-06-21 10:08:32,505] {standard_task_runner.py:54} INFO - Started process 15707 to run task
+[2022-06-21 10:08:32,543] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'odds_portal', '2022-04-12T00:00:00+00:00', '--job_id', '126', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmptqi6ww9z']
+[2022-06-21 10:08:32,543] {standard_task_runner.py:78} INFO - Job 126: Subtask odds_portal
+[2022-06-21 10:08:32,724] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 10:08:32,732] {logging_mixin.py:112} INFO - 
+[2022-06-21 10:08:32,732] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 10:08:32,765] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 10:08:32,765] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 10:08:32,938] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 10:09:28,941] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=odds_portal, execution_date=20220412T000000, start_date=20220621T130832, end_date=20220621T130928
+[2022-06-21 10:09:32,121] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-21 10:51:45,706] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [queued]>
+[2022-06-21 10:51:45,711] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [queued]>
+[2022-06-21 10:51:45,711] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 10:51:45,711] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-21 10:51:45,711] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-21 10:51:45,919] {taskinstance.py:901} INFO - Executing <Task(OddsPortalOperator): odds_portal> on 2022-04-12T00:00:00+00:00
+[2022-06-21 10:51:45,920] {standard_task_runner.py:54} INFO - Started process 22989 to run task
+[2022-06-21 10:51:45,957] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'odds_portal', '2022-04-12T00:00:00+00:00', '--job_id', '127', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmpn59amy5k']
+[2022-06-21 10:51:45,957] {standard_task_runner.py:78} INFO - Job 127: Subtask odds_portal
+[2022-06-21 10:51:46,091] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.odds_portal 2022-04-12T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-21 10:51:46,099] {logging_mixin.py:112} INFO - 
+[2022-06-21 10:51:46,099] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-21 10:51:46,131] {logger.py:16} INFO - Current google-chrome version is 102.0.5005
+[2022-06-21 10:51:46,131] {logger.py:16} INFO - Get LATEST chromedriver version for 102.0.5005 google-chrome
+[2022-06-21 10:51:46,303] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
+[2022-06-21 10:52:08,506] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=odds_portal, execution_date=20220412T000000, start_date=20220621T135145, end_date=20220621T135208
+[2022-06-21 10:52:10,577] {local_task_job.py:102} INFO - Task exited with return code 0
