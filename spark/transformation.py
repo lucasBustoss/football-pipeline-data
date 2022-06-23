@@ -31,13 +31,13 @@ def get_who_scored(df):
     ws_comments_df = df\
         .select(explode('matches').alias('matches'))\
         .select(
-            'matches.match_id', 
+            col('matches.match_id').alias('match_id'),
             explode('matches.comments').alias('comments')
-        )\
+            )\
         .select(
             'match_id',
             'comments.*'
-            )
+        )
 
     ws_teams_df = df\
         .select(explode('teams').alias('teams'))\
@@ -94,11 +94,3 @@ if __name__ == '__main__':
         .getOrCreate()
     
     football_transform(spark, args.src, args.dest, args.process_date)
-
-    """
-    spark = SparkSession\
-        .builder\
-        .appName('twitter_transformation')\
-        .getOrCreate()
-    football_transform(spark, "/home/lucas/pipeline-data/datalake/bronze/extract_date=2022-04-11", "", "")
-    """

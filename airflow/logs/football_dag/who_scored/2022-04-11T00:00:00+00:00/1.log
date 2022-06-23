@@ -392,3 +392,106 @@ FileNotFoundError: [Errno 2] No such file or directory: '/home/lucas/pipeline-da
 [2022-06-21 12:25:03,731] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
 [2022-06-21 12:27:08,646] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=who_scored, execution_date=20220411T000000, start_date=20220621T152503, end_date=20220621T152708
 [2022-06-21 12:27:13,095] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-22 21:51:09,447] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-11T00:00:00+00:00 [None]>
+[2022-06-22 21:51:09,452] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.who_scored 2022-04-11T00:00:00+00:00 [None]>
+[2022-06-22 21:51:09,452] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-22 21:51:09,452] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-22 21:51:09,452] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-22 21:51:09,457] {taskinstance.py:901} INFO - Executing <Task(WhoScoredOperator): who_scored> on 2022-04-11T00:00:00+00:00
+[2022-06-22 21:51:09,458] {standard_task_runner.py:54} INFO - Started process 21324 to run task
+[2022-06-22 21:51:09,492] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'who_scored', '2022-04-11T00:00:00+00:00', '--job_id', '124', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmp6nz15vqn']
+[2022-06-22 21:51:09,492] {standard_task_runner.py:78} INFO - Job 124: Subtask who_scored
+[2022-06-22 21:51:09,505] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.who_scored 2022-04-11T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-22 21:51:09,513] {logging_mixin.py:112} INFO - 
+[2022-06-22 21:51:09,513] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-22 21:51:09,544] {logger.py:16} INFO - Current google-chrome version is 103.0.5060
+[2022-06-22 21:51:09,544] {logger.py:16} INFO - Get LATEST chromedriver version for 103.0.5060 google-chrome
+[2022-06-22 21:51:09,686] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/103.0.5060.53/chromedriver] found in cache
+[2022-06-22 21:51:11,890] {taskinstance.py:1150} ERROR - Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=103.0.5060.53)
+Stacktrace:
+#0 0x55b284cbbb13 <unknown>
+#1 0x55b284ac2688 <unknown>
+#2 0x55b284aaf8f5 <unknown>
+#3 0x55b284aaf355 <unknown>
+#4 0x55b284aae815 <unknown>
+#5 0x55b284aad4df <unknown>
+#6 0x55b284aada9c <unknown>
+#7 0x55b284abc0c5 <unknown>
+#8 0x55b284aaf0a6 <unknown>
+#9 0x55b284aaffbb <unknown>
+#10 0x55b284aaf372 <unknown>
+#11 0x55b284aae815 <unknown>
+#12 0x55b284aad4df <unknown>
+#13 0x55b284aad942 <unknown>
+#14 0x55b284ac40e2 <unknown>
+#15 0x55b284b2b2ef <unknown>
+#16 0x55b284b178b2 <unknown>
+#17 0x55b284b2ab94 <unknown>
+#18 0x55b284b177a3 <unknown>
+#19 0x55b284aed0ea <unknown>
+#20 0x55b284aee225 <unknown>
+#21 0x55b284d032dd <unknown>
+#22 0x55b284d072c7 <unknown>
+#23 0x55b284ced22e <unknown>
+#24 0x55b284d080a8 <unknown>
+#25 0x55b284ce1bc0 <unknown>
+#26 0x55b284d246c8 <unknown>
+#27 0x55b284d24848 <unknown>
+#28 0x55b284d3ec0d <unknown>
+#29 0x7fc8c91f4b43 <unknown>
+Traceback (most recent call last):
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 984, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/lucas/pipeline-data/airflow/plugins/operators/who_scored_operator.py", line 38, in execute
+    games = hook.run()
+  File "/home/lucas/pipeline-data/airflow/plugins/hooks/who_scored_hook.py", line 184, in run
+    self.connect_to_website()
+  File "/home/lucas/pipeline-data/airflow/plugins/hooks/who_scored_hook.py", line 37, in connect_to_website
+    self.driver.get(url)
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 442, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 430, in execute
+    self.error_handler.check_response(response)
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=103.0.5060.53)
+Stacktrace:
+#0 0x55b284cbbb13 <unknown>
+#1 0x55b284ac2688 <unknown>
+#2 0x55b284aaf8f5 <unknown>
+#3 0x55b284aaf355 <unknown>
+#4 0x55b284aae815 <unknown>
+#5 0x55b284aad4df <unknown>
+#6 0x55b284aada9c <unknown>
+#7 0x55b284abc0c5 <unknown>
+#8 0x55b284aaf0a6 <unknown>
+#9 0x55b284aaffbb <unknown>
+#10 0x55b284aaf372 <unknown>
+#11 0x55b284aae815 <unknown>
+#12 0x55b284aad4df <unknown>
+#13 0x55b284aad942 <unknown>
+#14 0x55b284ac40e2 <unknown>
+#15 0x55b284b2b2ef <unknown>
+#16 0x55b284b178b2 <unknown>
+#17 0x55b284b2ab94 <unknown>
+#18 0x55b284b177a3 <unknown>
+#19 0x55b284aed0ea <unknown>
+#20 0x55b284aee225 <unknown>
+#21 0x55b284d032dd <unknown>
+#22 0x55b284d072c7 <unknown>
+#23 0x55b284ced22e <unknown>
+#24 0x55b284d080a8 <unknown>
+#25 0x55b284ce1bc0 <unknown>
+#26 0x55b284d246c8 <unknown>
+#27 0x55b284d24848 <unknown>
+#28 0x55b284d3ec0d <unknown>
+#29 0x7fc8c91f4b43 <unknown>
+
+[2022-06-22 21:51:11,899] {taskinstance.py:1187} INFO - Marking task as FAILED. dag_id=football_dag, task_id=who_scored, execution_date=20220411T000000, start_date=20220623T005109, end_date=20220623T005111
+[2022-06-22 21:51:14,444] {local_task_job.py:102} INFO - Task exited with return code 1

@@ -345,3 +345,33 @@ airflow.exceptions.AirflowException: Task received SIGTERM signal
 [2022-06-21 12:24:00,942] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/102.0.5005.61/chromedriver] found in cache
 [2022-06-21 12:24:54,205] {taskinstance.py:1057} INFO - Marking task as SUCCESS.dag_id=football_dag, task_id=odds_portal, execution_date=20220411T000000, start_date=20220621T152400, end_date=20220621T152454
 [2022-06-21 12:24:55,256] {local_task_job.py:102} INFO - Task exited with return code 0
+[2022-06-22 21:50:57,785] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.odds_portal 2022-04-11T00:00:00+00:00 [queued]>
+[2022-06-22 21:50:57,789] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: football_dag.odds_portal 2022-04-11T00:00:00+00:00 [queued]>
+[2022-06-22 21:50:57,789] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-22 21:50:57,789] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-06-22 21:50:57,789] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-22 21:50:57,793] {taskinstance.py:901} INFO - Executing <Task(OddsPortalOperator): odds_portal> on 2022-04-11T00:00:00+00:00
+[2022-06-22 21:50:57,795] {standard_task_runner.py:54} INFO - Started process 21076 to run task
+[2022-06-22 21:50:57,827] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'football_dag', 'odds_portal', '2022-04-11T00:00:00+00:00', '--job_id', '128', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/football_dag.py', '--cfg_path', '/tmp/tmp84e1v4lz']
+[2022-06-22 21:50:57,827] {standard_task_runner.py:78} INFO - Job 128: Subtask odds_portal
+[2022-06-22 21:50:57,839] {logging_mixin.py:112} INFO - Running <TaskInstance: football_dag.odds_portal 2022-04-11T00:00:00+00:00 [running]> on host lucas-AB350M-DS3H-V2
+[2022-06-22 21:50:57,846] {logging_mixin.py:112} INFO - 
+[2022-06-22 21:50:57,846] {logger.py:16} INFO - ====== WebDriver manager ======
+[2022-06-22 21:50:57,879] {logger.py:16} INFO - Current google-chrome version is 103.0.5060
+[2022-06-22 21:50:57,879] {logger.py:16} INFO - Get LATEST chromedriver version for 103.0.5060 google-chrome
+[2022-06-22 21:50:58,086] {logger.py:16} INFO - Driver [/home/lucas/.wdm/drivers/chromedriver/linux64/103.0.5060.53/chromedriver] found in cache
+[2022-06-22 21:51:02,544] {taskinstance.py:1150} ERROR - list index out of range
+Traceback (most recent call last):
+  File "/home/lucas/pipeline-data/.env/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 984, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/lucas/pipeline-data/airflow/plugins/operators/odds_portal_operator.py", line 40, in execute
+    result = hook.run()
+  File "/home/lucas/pipeline-data/airflow/plugins/hooks/odds_portal_hook.py", line 126, in run
+    games_rows = self.get_games_by_date()
+  File "/home/lucas/pipeline-data/airflow/plugins/hooks/odds_portal_hook.py", line 76, in get_games_by_date
+    total_pages = int(pagination[len(pagination)-3].get_attribute('innerHTML').replace('<span>', '').replace('</span>', ''))
+IndexError: list index out of range
+[2022-06-22 21:51:02,545] {taskinstance.py:1187} INFO - Marking task as FAILED. dag_id=football_dag, task_id=odds_portal, execution_date=20220411T000000, start_date=20220623T005057, end_date=20220623T005102
+[2022-06-22 21:51:02,784] {local_task_job.py:102} INFO - Task exited with return code 1
