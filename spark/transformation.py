@@ -63,6 +63,19 @@ def get_who_scored(df):
 
     return ws_df
 
+def get_api_football(df):
+    api_df = df\
+        .select(explode('response').alias('fixtures'))\
+        .selectExpr(
+            'fixtures.fixture.id', 'fixtures.fixture.date', 
+            'fixtures.league.id as league_id',
+            'fixtures.teams.home.name as home_team_name', 'fixtures.teams.away.name as away_team_name',
+            'fixtures.score.halftime.home as score_home_ht', 'fixtures.score.halftime.away as score_away_ht',
+            'fixtures.score.fulltime.home as score_home_ft', 'fixtures.score.fulltime.away as score_away_ft'
+            )
+
+    return api_df
+
 def football_transform(spark, src, dest, process_date):
     op_raw_df = spark.read.json(src + '/odds_portal')
     ws_raw_df = spark.read.json(src + '/who_scored')
@@ -70,13 +83,16 @@ def football_transform(spark, src, dest, process_date):
     
     odds_portal_df = get_odds_portal(op_raw_df)
     who_scored_df = get_who_scored(ws_raw_df)
+    api_football_df = get_api_football(api_raw_df)
 
     table_dest = join(dest, '{table_name}', f'process_date={process_date}')
 
     export_json(odds_portal_df, table_dest.format(table_name="odds_portal"))
     export_json(who_scored_df, table_dest.format(table_name="who_scored"))
+    export_json(api_football_df, table_dest.format(table_name="api_football"))
 
 if __name__ == '__main__':
+    
     sc = SparkContext()
     sc.addPyFile('/home/lucas/pipeline-data/helpers/helpers.py')
     
@@ -94,3 +110,14 @@ if __name__ == '__main__':
         .getOrCreate()
     
     football_transform(spark, args.src, args.dest, args.process_date)
+    """
+    spark = SparkSession\
+        .builder\
+        .appName('twitter_transformation')\
+        .getOrCreate()
+    
+    football_transform(
+        spark, 
+        '/home/lucas/pipeline-data/datalake/bronze/extract_date=2022-04-10', 
+        '/home/lucas/pipeline-data/datalake/silver/extract_date=2022-04-10', '')
+    """
