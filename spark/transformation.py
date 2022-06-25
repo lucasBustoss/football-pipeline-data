@@ -4,12 +4,23 @@ import argparse
 from pyspark import SparkContext
 from pyspark.sql.functions import col, udf, explode
 from pyspark.sql import SparkSession
-from pyspark.sql.types import StringType
+from pyspark.sql.types import StringType, IntegerType
 
 from helpers import Helpers
 
 def export_json(df, dest):
     df.coalesce(1).write.mode('overwrite').json(dest)
+
+def treat_names(df, shouldDifferTeams):
+    treat_names = udf(Helpers().treat_names, StringType())
+    
+    if (shouldDifferTeams):
+        df = df.withColumn("home_team", treat_names(col('home_team')))
+        df = df.withColumn("away_team", treat_names(col('away_team')))
+    else:
+        df = df.withColumn("team_name", treat_names(col('team_name')))
+
+    return df
 
 def get_odds_portal(df):
     op_df = df\
@@ -21,9 +32,7 @@ def get_odds_portal(df):
             'odd_away'
         )
     
-    treat_names = udf(Helpers().treat_names, StringType())
-    op_df = op_df.withColumn("home_team", treat_names(col('home_team')))
-    op_df = op_df.withColumn("away_team", treat_names(col('away_team')))
+    op_df = treat_names(op_df, shouldDifferTeams=True)
 
     return op_df
 
@@ -52,6 +61,9 @@ def get_who_scored(df):
         'left')
 
     ws_df = ws_df\
+        .withColumn('match_id', ws_df.match_id.cast(IntegerType()))\
+        .withColumn('minute', ws_df.minute.cast(IntegerType()))\
+        .withColumn('second', ws_df.second.cast(IntegerType()))\
         .selectExpr(
             'match_id',
             'minute',
@@ -61,6 +73,8 @@ def get_who_scored(df):
             'text'
             )
 
+    ws_df = treat_names(ws_df, shouldDifferTeams=False)
+
     return ws_df
 
 def get_api_football(df):
@@ -69,11 +83,13 @@ def get_api_football(df):
         .selectExpr(
             'fixtures.fixture.id', 'fixtures.fixture.date', 
             'fixtures.league.id as league_id',
-            'fixtures.teams.home.name as home_team_name', 'fixtures.teams.away.name as away_team_name',
+            'fixtures.teams.home.name as home_team', 'fixtures.teams.away.name as away_team',
             'fixtures.score.halftime.home as score_home_ht', 'fixtures.score.halftime.away as score_away_ht',
             'fixtures.score.fulltime.home as score_home_ft', 'fixtures.score.fulltime.away as score_away_ft'
             )
 
+    api_df = treat_names(api_df, shouldDifferTeams=True)
+    
     return api_df
 
 def football_transform(spark, src, dest, process_date):
@@ -92,9 +108,6 @@ def football_transform(spark, src, dest, process_date):
     export_json(api_football_df, table_dest.format(table_name="api_football"))
 
 if __name__ == '__main__':
-    
-    sc = SparkContext()
-    sc.addPyFile('/home/lucas/pipeline-data/helpers/helpers.py')
     
     parser = argparse.ArgumentParser(
         description='Spark Football Transformation'
@@ -120,4 +133,4 @@ if __name__ == '__main__':
         spark, 
         '/home/lucas/pipeline-data/datalake/bronze/extract_date=2022-04-10', 
         '/home/lucas/pipeline-data/datalake/silver/extract_date=2022-04-10', '')
-    """
+    """ 

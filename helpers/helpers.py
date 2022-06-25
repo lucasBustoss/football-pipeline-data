@@ -32,6 +32,9 @@ class Helpers():
         
         if (name == 'Sao Paulo'):
             return 'São Paulo'
+
+        if (name == 'Santos FC'):
+            return 'Santos'
             
         return name
 
@@ -74,3 +77,48 @@ class Helpers():
             
         if(month == 'Dec'):
             return '12'
+
+    def treat_stats(self, commentary):
+        if('woodwork' in commentary):
+            return 'Chute na trave'
+        
+        if('misses attempt' in commentary):
+            return 'Chute para fora'
+        
+        if('attempt saved' in commentary):
+            return 'Chute no gol'
+        
+        if('shot blocked' in commentary):
+            return 'Chute bloqueado'
+        
+        if('Second half ends' in commentary):
+            return 'Fim de jogo'
+        
+        if('First half ends' in commentary):
+            return 'Fim do primeiro tempo'
+        
+        if('Second half begins!' in commentary):
+            return 'Começo de segundo tempo!'
+        
+        if('Formation Set' in commentary):
+            return 'Formação: '
+        
+        if('First half begins!' in commentary):
+            return 'Formação: '
+        
+        if('wins a corner' in commentary):
+            return 'Canto'
+        
+        if('GOAL' in commentary):
+            return 'Gol'
+        
+        if('yellow card' in commentary):
+            return 'Cartão amarelo'
+        
+        if('red card' in commentary):
+            return 'Cartão vermelho'
+        
+        if('attempt saved' in commentary):
+            return 'Cartão vermelho'
+        
+        return ''

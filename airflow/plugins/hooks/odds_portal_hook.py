@@ -96,9 +96,9 @@ class OddsPortalHook(BaseHook):
                         ' ', 
                         game.find_element(By.XPATH, 'th//span').get_attribute('innerHTML'))
                     
-                    day = date_splitted[1] if date_splitted[0] == 'Yesterday,' else date_splitted[0]
-                    month = date_splitted[2] if date_splitted[0] == 'Yesterday,' else date_splitted[1]
-                    
+                    day = date_splitted[1] if (date_splitted[0] == 'Yesterday,') | (date_splitted[0] == 'Today,')  else date_splitted[0]
+                    month = date_splitted[2] if (date_splitted[0] == 'Yesterday,') | (date_splitted[0] == 'Today,')  else date_splitted[1]
+
                     date = datetime.datetime(
                         2022, 
                         int(Helpers().treat_month_names(month)), 

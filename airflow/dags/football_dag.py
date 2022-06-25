@@ -70,5 +70,23 @@ with DAG(
             '{{ ds }}'
         ]
     )
+    football_get_matchs = SparkSubmitOperator(
+        task_id='football_get_matchs',
+        application=join(
+            str(Path(__file__).parents[2]),
+            'spark/get_matchs.py'
+        ),
+        name='football_get_matchs'
+    )
+    football_get_stats = SparkSubmitOperator(
+        task_id='football_get_stats',
+        application=join(
+            str(Path(__file__).parents[2]),
+            'spark/get_stats.py'
+        ),
+        name='football_get_stats'
+    )
 
-    odds_portal_operator >> football_transform
+    api_football_operator >> football_transform >> football_get_matchs
+    odds_portal_operator >> football_transform >> football_get_matchs
+    who_scored_operator >> football_transform >> football_get_stats
