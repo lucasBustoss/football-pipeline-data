@@ -7,11 +7,11 @@ if __name__ == "__main__":
         .getOrCreate()
     
     api = spark.read.json(
-        "/home/lucas/pipeline-data/datalake/silver/api_football"
+        "datalake/silver/api_football"
     )
     
     odds = spark.read.json(
-        "/home/lucas/pipeline-data/datalake/silver/odds_portal"
+        "datalake/silver/odds_portal"
     )
 
     football = api.alias('api')\
@@ -31,5 +31,5 @@ if __name__ == "__main__":
         .write\
         .mode("overwrite")\
         .json(
-        "/home/lucas/pipeline-data/datalake/gold/matchs"
+        "datalake/gold/matchs"
     )

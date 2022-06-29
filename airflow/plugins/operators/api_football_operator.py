@@ -47,7 +47,7 @@ if __name__ == '__main__':
         to = ApiFootballOperator(
             season='2022', 
             file_path=join(
-                '/home/lucas/pipeline-data/datalake',
+                'datalake',
                 'api_football',
                 'extract_date={{ ds }}',
                 'ApiFootball_{{ ds_nodash }}.json'

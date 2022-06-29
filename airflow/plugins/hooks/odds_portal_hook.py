@@ -3,7 +3,7 @@ import time
 import datetime
 
 import sys
-sys.path.append('/home/lucas/pipeline-data/helpers')
+sys.path.append('helpers')
 
 from helpers import Helpers
 
@@ -13,7 +13,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class OddsPortalHook(BaseHook):
@@ -29,7 +28,12 @@ class OddsPortalHook(BaseHook):
     def connect_to_website(self):
         url = 'https://www.oddsportal.com/soccer/brazil/serie-a/results/'
 
-        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('headless')
+        chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument("--remote-debugging-port=9222")
+
+        self.driver = webdriver.Chrome(options=chrome_options, service=Service(ChromeDriverManager().install()))
         self.driver.get(url)
 
     def get_odds(self, games_rows):

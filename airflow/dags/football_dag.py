@@ -1,14 +1,11 @@
 import os, sys
-currentdir = os.path.dirname(os.path.realpath(__file__))
-parentdir = os.path.dirname(currentdir)
-sys.path.append(parentdir)
 
 import datetime
 from pathlib import Path
 from os.path import join
 
 from airflow.models import DAG
-from airflow.operators.football import ApiFootballOperator, OddsPortalOperator, WhoScoredOperator
+from airflow.operators.football import ApiFootballOperator, OddsPortalOperator
 from airflow.contrib.operators.spark_submit_operator import SparkSubmitOperator
 from airflow.utils.dates import days_ago
 
@@ -18,12 +15,10 @@ ARGS = {
     'start_date': datetime.datetime(2022, 4, 10)
 }
 BASE_WRITE_FOLDER = join(
-    str(Path('/home/lucas').expanduser()),
-    'pipeline-data/datalake/{stage}/{partition}/{source}'
+    './datalake/{stage}/{partition}/{source}'
 )
 BASE_READ_FOLDER = join(
-    str(Path('/home/lucas').expanduser()),
-    'pipeline-data/datalake/{stage}/{partition}'
+    './datalake/{stage}/{partition}'
 )
 PARTITION_FOLDER = 'extract_date={{ ds }}'
 
@@ -45,13 +40,6 @@ with DAG(
         file_path=join(
             BASE_WRITE_FOLDER.format(stage='bronze', source='odds_portal', partition=PARTITION_FOLDER),
             "OddsPortal_{{ ds_nodash }}.json"
-        )
-    )
-    who_scored_operator = WhoScoredOperator(
-        task_id='who_scored',
-        file_path=join(
-            BASE_WRITE_FOLDER.format(stage='bronze', source='who_scored', partition=PARTITION_FOLDER),
-            "WhoScored_{{ ds_nodash }}.json"
         )
     )
     football_transform = SparkSubmitOperator(
@@ -78,15 +66,6 @@ with DAG(
         ),
         name='football_get_matchs'
     )
-    football_get_stats = SparkSubmitOperator(
-        task_id='football_get_stats',
-        application=join(
-            str(Path(__file__).parents[2]),
-            'spark/get_stats.py'
-        ),
-        name='football_get_stats'
-    )
 
     api_football_operator >> football_transform >> football_get_matchs
     odds_portal_operator >> football_transform >> football_get_matchs
-    who_scored_operator >> football_transform >> football_get_stats

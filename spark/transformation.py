@@ -94,17 +94,17 @@ def get_api_football(df):
 
 def football_transform(spark, src, dest, process_date):
     op_raw_df = spark.read.json(src + '/odds_portal')
-    ws_raw_df = spark.read.json(src + '/who_scored')
+    #ws_raw_df = spark.read.json(src + '/who_scored')
     api_raw_df = spark.read.json(src + '/api_football')
     
     odds_portal_df = get_odds_portal(op_raw_df)
-    who_scored_df = get_who_scored(ws_raw_df)
+    #who_scored_df = get_who_scored(ws_raw_df)
     api_football_df = get_api_football(api_raw_df)
 
     table_dest = join(dest, '{table_name}', f'process_date={process_date}')
 
     export_json(odds_portal_df, table_dest.format(table_name="odds_portal"))
-    export_json(who_scored_df, table_dest.format(table_name="who_scored"))
+    #export_json(who_scored_df, table_dest.format(table_name="who_scored"))
     export_json(api_football_df, table_dest.format(table_name="api_football"))
 
 if __name__ == '__main__':
@@ -131,6 +131,6 @@ if __name__ == '__main__':
     
     football_transform(
         spark, 
-        '/home/lucas/pipeline-data/datalake/bronze/extract_date=2022-04-10', 
-        '/home/lucas/pipeline-data/datalake/silver/extract_date=2022-04-10', '')
+        'datalake/bronze/extract_date=2022-04-10', 
+        'datalake/silver/extract_date=2022-04-10', '')
     """ 

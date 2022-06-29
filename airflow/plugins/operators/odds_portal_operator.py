@@ -44,7 +44,7 @@ if __name__ == '__main__':
     with DAG(dag_id='ApiFootballTest', start_date=datetime.now()) as dag:
         to = OddsPortalOperator(
             file_path=join(
-                '/home/lucas/pipeline-data/datalake',
+                'datalake',
                 'odds_portal',
                 'extract_date={{ ds }}',
                 'OddsPortal_{{ ds_nodash }}.json'
